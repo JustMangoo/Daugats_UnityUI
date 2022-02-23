@@ -7,7 +7,7 @@ public class ImageScript : MonoBehaviour {
 	public GameObject Helmets, Chests, Pants, Boots;
 	public GameObject attelaTuretajs;
 	public Sprite[] attelumasivs;
-	public GameObject slaideris;
+	public GameObject slaideris1, slaideris2;
 
 	public void helmetsAttelosana(bool vertiba){
 		Helmets.SetActive (vertiba);
@@ -32,8 +32,13 @@ public class ImageScript : MonoBehaviour {
 			attelaTuretajs.GetComponent<Image> ().sprite = attelumasivs [1];
 	}
 
-	public void mainitLielumu(){
-		float pasreizejaVertiba = slaideris.GetComponent<Slider> ().value;
-		attelaTuretajs.transform.localScale = new Vector2 (1F * pasreizejaVertiba, 1F * pasreizejaVertiba);
+	public void mainitPlat(){
+		float pasreizejaVertiba = slaideris1.GetComponent<Slider> ().value;
+		attelaTuretajs.transform.localScale = new Vector2 (1F * pasreizejaVertiba, 1F);
+	}
+
+	public void mainitAug(){
+		float pasreizejaVertiba = slaideris2.GetComponent<Slider> ().value;
+		attelaTuretajs.transform.localScale = new Vector2 (1F, 1F * pasreizejaVertiba);
 	}
 }

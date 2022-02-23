@@ -4,9 +4,26 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ImageScript : MonoBehaviour {
+	public GameObject Helmets, Chests, Pants, Boots;
 	public GameObject attelaTuretajs;
 	public Sprite[] attelumasivs;
 	public GameObject slaideris;
+
+	public void helmetsAttelosana(bool vertiba){
+		Helmets.SetActive (vertiba);
+	}
+
+	public void chestsAttelosana(bool vertiba){
+		Chests.SetActive (vertiba);
+	}
+
+	public void pantsAttelosana(bool vertiba){
+		Pants.SetActive (vertiba);
+	}
+
+	public void bootsAttelosana(bool vertiba){
+		Boots.SetActive (vertiba);
+	}
 
 	public void izkritosais(int skaitlis){
 		if (skaitlis == 0)
